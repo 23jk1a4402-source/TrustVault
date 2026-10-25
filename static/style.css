@@ -1,0 +1,41 @@
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+  --brand:#4f46e5; --brand-dark:#4338ca; --line:#e5e7eb;
+  --ok:#16a34a; --bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; background:var(--bg); color:var(--ink);
+  font-family:"Segoe UI",Roboto,Arial,sans-serif;
+  display:flex; justify-content:center; align-items:flex-start; padding:40px 16px;
+}
+.container,.card,main,form{ }
+.container,.card,main{
+  width:100%; max-width:760px; background:var(--card);
+  border:1px solid var(--line); border-radius:14px; padding:32px;
+  box-shadow:0 10px 30px rgba(17,24,39,.08);
+}
+h1{margin:0 0 4px; font-size:28px; color:var(--brand); letter-spacing:.3px}
+h2{margin:0 0 20px; font-size:20px; font-weight:600}
+p{color:var(--muted); line-height:1.5}
+input,select{
+  width:100%; padding:12px 14px; margin:8px 0 14px; font-size:15px;
+  border:1px solid var(--line); border-radius:10px; background:#fff;
+}
+input:focus,select:focus{outline:none; border-color:var(--brand); box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+button,.btn,input[type=submit]{
+  display:inline-block; padding:11px 20px; font-size:15px; font-weight:600;
+  color:#fff; background:var(--brand); border:none; border-radius:10px;
+  cursor:pointer; text-decoration:none; transition:background .15s;
+}
+button:hover,.btn:hover{background:var(--brand-dark)}
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+table{width:100%; border-collapse:collapse; margin-top:16px; font-size:14px}
+th{text-align:left; color:var(--muted); font-weight:600; padding:10px; border-bottom:2px solid var(--line)}
+td{padding:10px; border-bottom:1px solid var(--line)}
+tr:hover td{background:#f9fafb}
+.flash,.message{padding:10px 14px; border-radius:8px; margin:12px 0; background:#eef2ff; color:var(--brand-dark)}
+.error{background:#fef2f2; color:var(--bad)}
+.success{background:#f0fdf4; color:var(--ok)}
+@media(max-width:600px){.container,.card,main{padding:20px}}
